@@ -19,6 +19,7 @@ from django.urls import path,include
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from paciente.api.router import paciente_router
+from padrino.api.router import router_padrino
 
 
 
@@ -44,5 +45,6 @@ urlpatterns = [
     path(r'redocs/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path(r'api/', include('user.api.router')),
     path(r'api/',include(paciente_router.urls)),
+    path(r'api/',include(router_padrino.urls)),
     
 ]
