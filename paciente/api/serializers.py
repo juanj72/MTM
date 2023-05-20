@@ -7,7 +7,3 @@ class PacienteSerializer(serializers.ModelSerializer):
         model = Paciente
         fields = '__all__'
 
-class DreamSeralizer(serializers.ModelSerializer):
-    class Meta:
-        model = Dream
-        fields = '__all__'
