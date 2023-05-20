@@ -11,7 +11,7 @@ class Familiar (models.Model):
     #estado_civil
     nombre = models.CharField(max_length=255)
     apellido = models.CharField(max_length=255)
-    telefono = models.IntegerField()
+    telefono = models.BigIntegerField()
 
     class Meta:
         db_table = 'familiar'
