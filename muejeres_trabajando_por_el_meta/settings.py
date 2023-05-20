@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'paciente',
     'padrino',
     'dream',
+    'familiar',
     'corsheaders',
 
 ]

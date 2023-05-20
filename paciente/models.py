@@ -1,5 +1,6 @@
 from django.db import models
 from dream.models import Dream
+from padrino.models import Padrino
 # Create your models here.
 
 
@@ -25,8 +26,12 @@ class Paciente(models.Model):
     estado = models.ForeignKey(Estado,on_delete=models.SET_NULL,null=True)
     eps = models.ForeignKey(Eps, on_delete=models.SET_NULL,null=True)
     dream = models.ForeignKey(Dream,on_delete=models.SET_NULL,null=True)
+    class Meta:
+        db_table = 'paciente'
 
 
-
+class padrino(models.Model):
+    paciente = models.ForeignKey(Paciente,on_delete=models.SET)
+    padrino = models.ForeignKey(Padrino,on_delete=models.SET)
 
     

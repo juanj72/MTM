@@ -13,4 +13,6 @@ class Padrino(models.Model):
     correo = models.EmailField()
     tiempo_apadrinando = models.TextField()
     campo = models.CharField(max_length=255)
+    class Meta:
+        db_table = 'padrino'
     
