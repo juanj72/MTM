@@ -21,6 +21,7 @@ from drf_yasg import openapi
 from paciente.api.router import paciente_router
 from padrino.api.router import router_padrino
 from dream.api.router import router_dream
+from familiar.api.router import router_familiar
 
 
 
@@ -48,5 +49,6 @@ urlpatterns = [
     path(r'api/',include(paciente_router.urls)),
     path(r'api/',include(router_padrino.urls)),
     path(r'api/',include(router_dream.urls)),
+    path(r'api/',include(router_familiar.urls))
     
 ]
