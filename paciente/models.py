@@ -1,6 +1,7 @@
 from django.db import models
 from dream.models import Dream
 from padrino.models import Padrino
+from familiar.models import Familiar
 # Create your models here.
 
 
@@ -34,4 +35,8 @@ class padrino(models.Model):
     paciente = models.ForeignKey(Paciente,on_delete=models.SET)
     padrino = models.ForeignKey(Padrino,on_delete=models.SET)
 
+class familiar (models.Model):
+    paciente = models.ForeignKey(Paciente,on_delete=models.SET)
+    familiar =models.ForeignKey(Familiar,on_delete=models.SET)
+    
     

@@ -25,6 +25,7 @@ class UserView(APIView):
     
 
 class RegisterView(APIView):
+    permission_classes = [IsAuthenticated]
    # def post(self, request):
        # print('registrando usuario...')
        # return Response(status=status.HTTP_200_OK,data='todo ok')

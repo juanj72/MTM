@@ -9,11 +9,12 @@ from dream.api.serializers import *
 
 
 class ModelDreamViewSet(ModelViewSet):
-
+    permission_classes = [IsAuthenticated]
     serializer_class = dreamSerializer
     queryset = Dream.objects.all()
 
 
 class ModelTipoViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
     serializer_class = tipoSerializer
     queryset = Tipo.objects.all()

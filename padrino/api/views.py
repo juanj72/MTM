@@ -6,5 +6,6 @@ from rest_framework.permissions import IsAuthenticated
 
 
 class PadrinoViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
     queryset = Padrino.objects.all()
     serializer_class = PadrinoSerializer

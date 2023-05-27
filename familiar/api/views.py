@@ -7,5 +7,6 @@ from familiar.api.serializers import *
 
 
 class familiarViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
     serializer_class = familiarSerializer
     queryset = Familiar.objects.all()
