@@ -7,3 +7,5 @@ class PadrinoSerializer(serializers.ModelSerializer):
     class Meta :
         model = Padrino
         fields = '__all__'
+
+        
