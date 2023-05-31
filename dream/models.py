@@ -6,6 +6,9 @@ class Tipo(models.Model):
     nombre = models.CharField(max_length=255)
     descripcion = models.TextField()
 
+    def __str__(self):
+        return str(self.nombre)
+
 
 
 class Dream (models.Model):
